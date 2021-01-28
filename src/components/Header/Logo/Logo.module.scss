@@ -1,0 +1,15 @@
+@import '../../../global/mixin.scss';
+
+.logo{
+    a {
+        width: 125px;
+        text-decoration: none;
+        @include flex;
+  
+        span {
+          font-size: 24px;
+          color: #383838;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+      }
+}
