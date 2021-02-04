@@ -12,16 +12,16 @@ function NavMenu() {
 
           <div className={NavMenuStyle.navMenu}>
             <div className={NavMenuStyle.active}>
-              <a href="/profile">Profile</a>
+              <a href="/Profile">Profile</a>
             </div>
             <div>
-              <a href="/messagesPage">Messages</a>
+              <a href="/MessagesPage">Messages</a>
             </div>
             <div>
-              <a href="#">Music</a>
+              <a href="#">Photo</a>
             </div>
             <div>
-              <a href="#">News</a>
+              <a href="#">About</a>
             </div>
             <div>
               <a href="#">Settings</a>

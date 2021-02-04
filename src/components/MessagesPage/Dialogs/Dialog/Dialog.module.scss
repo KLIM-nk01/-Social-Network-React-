@@ -1,37 +1,34 @@
+.dialog {
+  width: 100%;
+  height: 63px;
+  display: flex;
+  align-items: center;
+  &:hover {
+    background-color: #eff2f5;
+    cursor: pointer;
+  }
 
-.dialog{
-    width: 100%;
-    height: 63px;
-    display: flex;
-   align-items: center;
-   &:hover{
-       background-color: #eff2f5;
-       cursor: pointer;
-   }
-   
-
-   .wrapper{
+  .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 100%;
-   padding: 0 10px;
-   border-bottom: 1px solid #edeef0;
-   }
+    padding: 0 10px;
+    border-bottom: 1px solid #edeef0;
+  }
 
-    img{
-        width: 46px;
-        height: 46px;
-        border-radius: 50px;
-        margin-left: 10px;
-    }
+  img {
+    width: 46px;
+    height: 46px;
+    border-radius: 50px;
+    margin-left: 10px;
+  }
 
-    .name_message{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 40px;
-    }
-
+  .name_message {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40px;
+  }
 }

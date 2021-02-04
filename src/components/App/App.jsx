@@ -6,19 +6,22 @@ import Profile from "../Profile/Profile";
 import "../../global/reset.scss";
 import Footer from "../Footer/Footer";
 import MessagesPage from "../MessagesPage/MessagesPage";
+import { BrowserRouter, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className={AppStyle.App}>
-      <Header />
-      <Navbar />
-      <div className={AppStyle.main_wrapper}>
-        {/* <Profile /> */}
-        <MessagesPage />
-      </div>
+    <BrowserRouter>
+      <div className={AppStyle.App}>
+        <Header />
+        <Navbar />
+        <div className={AppStyle.main_wrapper}>
+          <Route path='/Profile' component={Profile} />
+          <Route path='/MessagesPage' component={MessagesPage} />
+        </div>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
