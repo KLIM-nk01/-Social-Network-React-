@@ -5,6 +5,7 @@ import Navbar from "../Navbar/Navbar";
 import Profile from "../Profile/Profile";
 import "../../global/reset.scss";
 import Footer from "../Footer/Footer";
+import MessagesPage from "../MessagesPage/MessagesPage";
 
 function App() {
   return (
@@ -12,8 +13,8 @@ function App() {
       <Header />
       <Navbar />
       <div className={AppStyle.main_wrapper}>
-        
-        <Profile />
+        {/* <Profile /> */}
+        <MessagesPage />
       </div>
 
       <Footer />

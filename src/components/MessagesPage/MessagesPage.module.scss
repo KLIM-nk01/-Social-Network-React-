@@ -1,0 +1,26 @@
+.messagesPage {
+  width: 1170px;
+  height: 70vh;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  border: 3px solid #edeef0;
+  background-color: white;
+
+  .column {
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 8px;
+      visibility: hidden;
+    }
+    &::-webkit-scrollbar-thumb {
+      width: 8px;
+      background-color: #d2d6df;
+      border-radius: 50px;
+    }
+    &::-webkit-scrollbar-track{
+        visibility: hidden;
+    }
+   
+  }
+}

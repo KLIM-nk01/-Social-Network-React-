@@ -1,14 +1,16 @@
 import React from "react";
+import Button from "../Button/Button";
 import NavbarStyle from './Navbar.module.scss';
 import NavMenu from "./NavbarMenu/NavMenu";
 
 function Navbar() {
   return (
     <>
-      <nav className={NavbarStyle.navbar_wrapper}>
+      <div className={NavbarStyle.navbar_wrapper}>
         
         <NavMenu/>
-      </nav>
+       
+      </div>
     </>
   );
 }

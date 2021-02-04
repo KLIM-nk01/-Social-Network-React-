@@ -20,7 +20,11 @@ function Profile() {
           
           <PersonPost textContent="Hi, How are you?" />
           <PersonPost textContent="Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy." />
-          
+          <PersonPost textContent="Hi, How are you?" />
+          <PersonPost textContent="Hi, How are you?" />
+          <PersonPost textContent="Hi, How are you?" />
+          <PersonPost textContent="Hi, How are you?" />
+          <PersonPost textContent="Hi, How are you?" />
         </div>
         <div>
           <Notification />
