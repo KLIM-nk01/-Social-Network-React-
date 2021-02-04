@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Button from "../../Button/Button";
 import ProfilePhoto from "../../Profile/ProfilePhoto/ProfilePhoto";
 import NavMenuStyle from "./NavMenu.module.scss";
@@ -11,20 +12,20 @@ function NavMenu() {
           <ProfilePhoto />
 
           <div className={NavMenuStyle.navMenu}>
-            <div className={NavMenuStyle.active}>
-              <a href="/Profile">Profile</a>
+            <div>
+              <NavLink to="/Profile" activeClassName={NavMenuStyle.active}>Profile</NavLink>
             </div>
             <div>
-              <a href="/MessagesPage">Messages</a>
+              <NavLink to="/MessagesPage" activeClassName={NavMenuStyle.active}>Messages</NavLink>
             </div>
             <div>
-              <a href="#">Photo</a>
+              <NavLink to="#">Photo</NavLink>
             </div>
             <div>
-              <a href="#">About</a>
+              <NavLink to="#">About</NavLink>
             </div>
             <div>
-              <a href="#">Settings</a>
+              <NavLink to="#">Settings</NavLink>
             </div>
           </div>
 
