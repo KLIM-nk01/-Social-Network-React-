@@ -1,0 +1,11 @@
+@import '../../../global/mixin.scss';
+
+.postShare{
+    width: 570px;
+    height: 80px;
+    background-color: white;
+    // border: 2px solid black;
+    // box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+    @include shadow;
+}
+

@@ -3,6 +3,7 @@
   margin: 0;
   border: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 html,
@@ -15,9 +16,14 @@ body {
   outline: none;
 }
 
+a{
+  color: #333333;
+}
+
 a:focus,
 a:active {
   outline: none;
+  
 }
 
 nav,

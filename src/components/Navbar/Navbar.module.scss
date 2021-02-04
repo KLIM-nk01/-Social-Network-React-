@@ -1,6 +1,11 @@
 .navbar_wrapper{
-    width: 20%;
-    height: 200px;
+    
+    height: 420px;
     background-color: #333336;
-    margin-top: 15px;
+    
+    background-image: url(https://images.wallpaperscraft.ru/image/gorod_noch_panorama_117682_1920x1080.jpg);
+    background-size: cover;
+    background-position-y: center;
+    display: flex;
+    align-items: flex-end;
 }

@@ -1,0 +1,17 @@
+@import "../../../../global/mixin.scss";
+
+.about {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  div {
+    a {
+      font-size: 14px;
+      text-decoration: none;
+      color: #333333;
+      font-weight: 600;
+    }
+  }
+}
