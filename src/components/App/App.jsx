@@ -17,6 +17,7 @@ function App() {
         <div className={AppStyle.main_wrapper}>
           <Route path='/Profile' component={Profile} />
           <Route path='/MessagesPage' component={MessagesPage} />
+
         </div>
 
         <Footer />
