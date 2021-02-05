@@ -19,7 +19,7 @@ function NavMenu() {
               <NavLink to="/MessagesPage" activeClassName={NavMenuStyle.active}>Messages</NavLink>
             </div>
             <div>
-              <NavLink to="#">Photo</NavLink>
+              <NavLink to="/PhotoPage" activeClassName={NavMenuStyle.active}>Photo</NavLink>
             </div>
             <div>
               <NavLink to="#">About</NavLink>

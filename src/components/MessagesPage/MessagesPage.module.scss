@@ -4,12 +4,15 @@
   margin: 20px auto;
   display: grid;
   grid-template-columns: 35% 65%;
+  grid-column-gap: 5px;
   border: 3px solid #edeef0;
-  background-color: white;
+  background-color: #f0f0f0;
 
   .column {
     // overflow-y: scroll;
-    
-   
+    border: 1px solid #333336;
+    background-color: white;
+
+
   }
 }
