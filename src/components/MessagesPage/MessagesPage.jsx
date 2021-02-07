@@ -7,13 +7,14 @@ import ChatHeader from "./ChatHeader/ChatHeader";
 import ChatFooter from "./ChatFooter/ChatFooter";
 import Chat from "./Chat/Chat";
 
-function MessagesPage() {
+function MessagesPage(props) {
+
     return (
         <>
             <div className={MessagesPageStyle.messagesPage}>
                 <div className={MessagesPageStyle.column}>
                     <DialogsHeader/>
-                    <Dialogs/>
+                    <Dialogs dialogsData={props.dialogsData}/>
                     <DialogsFooter/>
                 </div>
                 <div className={MessagesPageStyle.column}>

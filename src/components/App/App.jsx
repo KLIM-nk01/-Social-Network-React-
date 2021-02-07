@@ -6,28 +6,28 @@ import Profile from "../Profile/Profile";
 import "../../global/reset.scss";
 import Footer from "../Footer/Footer";
 import MessagesPage from "../MessagesPage/MessagesPage";
-import { BrowserRouter, Route } from "react-router-dom";
+import {BrowserRouter, Route} from "react-router-dom";
 import PhotoPage from "../PhotoPage/PhotoPage";
 
-function App() {
-  return (
-    <BrowserRouter>
-      <div className={AppStyle.App}>
-        <Header />
-        <Navbar />
-        <div className={AppStyle.main_wrapper}>
-          {/*<Route path='/' component={Profile} />*/}
-          <Route path='/Profile' component={Profile} />
-          <Route path='/MessagesPage' component={MessagesPage} />
-          <Route path='/PhotoPage' component={PhotoPage} />
+function App(props) {
 
-        </div>
+    return (
+        <BrowserRouter>
+            <div className={AppStyle.App}>
+                <Header/>
+                <Navbar/>
+                <div className={AppStyle.main_wrapper}>
 
-        <Footer />
+                    <Route path={'/Profile'} render={() => <Profile postData={props.state.postData}/> }/>
+                    <Route path='/MessagesPage' render={() => <MessagesPage dialogsData={props.state.dialogsData}/> }/>
+                    <Route path='/PhotoPage' render={() => <PhotoPage imgData={props.state.imgData}/> }/>
+                </div>
 
-      </div>
-    </BrowserRouter>
-  );
+                <Footer/>
+
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;

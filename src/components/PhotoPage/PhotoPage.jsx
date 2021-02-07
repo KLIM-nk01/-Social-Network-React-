@@ -3,11 +3,11 @@ import PhotoPageStyle from './Photopage.module.scss';
 import PhotoPageHeader from "./PhotoPageHeader/PhotoPageHeader";
 import PhotoWrapper from "./PhotoWrapper/PhotoWrapper";
 
-const PhotoPage = () => {
+const PhotoPage = (props) => {
     return (
         <div className={PhotoPageStyle.PhotoPage}>
             <PhotoPageHeader/>
-            <PhotoWrapper/>
+            <PhotoWrapper imgData={props.imgData}/>
         </div>
     );
 };
