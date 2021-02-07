@@ -3,6 +3,7 @@
   height: 63px;
   display: flex;
   align-items: center;
+
   &:hover {
     background-color: #eff2f5;
     cursor: pointer;
@@ -16,6 +17,43 @@
     height: 100%;
     padding: 0 10px;
     border-bottom: 1px solid #edeef0;
+
+    .name_message {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 40px;
+    }
+
+    .close {
+      width: 18px;
+      height: 18px;
+      opacity: 0.3;
+      position: relative;
+      margin-bottom: 30px;
+      margin-left: 10px;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:before, &:after {
+        position: absolute;
+        left: 7px;
+        content: ' ';
+        height: 15px;
+        width: 2px;
+        background-color: #333;
+      }
+
+      &:before {
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
   }
 
   img {
@@ -25,10 +63,5 @@
     margin-left: 10px;
   }
 
-  .name_message {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 40px;
-  }
+
 }

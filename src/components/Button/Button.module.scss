@@ -6,4 +6,8 @@
     color: white;
     border-radius: 50px;
     font-weight: bold;
+    transition: all 0.9s ease-out;
+    &:hover{
+        background-color: #343a40;
+    }
 }

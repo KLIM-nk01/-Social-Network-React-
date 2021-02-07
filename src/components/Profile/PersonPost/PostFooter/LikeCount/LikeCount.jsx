@@ -2,13 +2,13 @@ import React from "react";
 import LikeCountStyle from "./LikeCount.module.scss";
 
 
-function LikeCount() {
+function LikeCount(props) {
   return (
     <>
       <div className={LikeCountStyle.likeCount}>
          <button type='button'>
          <img src="https://img.icons8.com/officexs/20/000000/filled-like.png"/>
-         <span>You and 207 people like this</span>
+         <span>You and {props.conutLikes} people like this</span>
          </button>
       </div>
     </>

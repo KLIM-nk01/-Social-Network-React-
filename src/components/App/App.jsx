@@ -16,6 +16,7 @@ function App() {
         <Header />
         <Navbar />
         <div className={AppStyle.main_wrapper}>
+          {/*<Route path='/' component={Profile} />*/}
           <Route path='/Profile' component={Profile} />
           <Route path='/MessagesPage' component={MessagesPage} />
           <Route path='/PhotoPage' component={PhotoPage} />
@@ -23,6 +24,7 @@ function App() {
         </div>
 
         <Footer />
+
       </div>
     </BrowserRouter>
   );

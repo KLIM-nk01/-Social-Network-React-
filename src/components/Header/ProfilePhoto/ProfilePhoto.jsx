@@ -8,7 +8,7 @@ function ProfilePhoto() {
     <>
       <div className={ProfilePhotoStyle.profilePhoto}>
           <NavLink to='/Profile'>
-              <img src={Photo} alt="Profile Photo"/>
+              <img src={'https://prikolist.club/wp-content/uploads/2019/08/kartinki_muzhskie_na_telefon_3_07073155.jpg'}/>
           </NavLink>
       </div>
     </>

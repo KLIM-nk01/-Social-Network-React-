@@ -5,12 +5,13 @@ import PostFooter from "./PostFooter/PostFooter";
 import PostHeader from "./PostHeader/PostHeader";
 
 function PersonPost(props) {
+
   return (
     <>
       <div className={PersonPostStyle.personPost}>
-        <PostHeader />
-        <PostContent textContent={props.textContent} />
-        <PostFooter />
+        <PostHeader imgSrc={props.imgSrc} nameSurname={props.nameSurname}/>
+        <PostContent postTextContent={props.postTextContent} />
+        <PostFooter conutLikes={props.conutLikes} countComments={props.countComments} countSharePost={props.countSharePost}/>
       </div>
     </>
   );

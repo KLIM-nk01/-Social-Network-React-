@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Button from "../../Button/Button";
-import ProfilePhoto from "../../Profile/ProfilePhoto/ProfilePhoto";
+import ProfilePhoto from "../../Header/ProfilePhoto/ProfilePhoto";
 import NavMenuStyle from "./NavMenu.module.scss";
 
 function NavMenu() {

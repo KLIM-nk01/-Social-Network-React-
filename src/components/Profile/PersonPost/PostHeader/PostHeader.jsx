@@ -4,11 +4,11 @@ import Person from "./Person/Person";
 import PostHeaderStyle from "./PostHeader.module.scss";
 
 
-function PostHeader() {
+function PostHeader(props) {
   return (
     <>
       <div className={PostHeaderStyle.postHeader}>
-          <Person/>
+          <Person imgSrc={props.imgSrc} nameSurname={props.nameSurname}/>
           <Burger/>
       </div>
     </>

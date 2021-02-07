@@ -6,7 +6,7 @@ function PostContent(props) {
   return (
     <>
       <div className={PostContentStyle.postContent}>
-          <span>{props.textContent}</span>
+          <span>{props.postTextContent}</span>
          
       </div>
     </>
