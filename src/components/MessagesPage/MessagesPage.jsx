@@ -14,7 +14,7 @@ function MessagesPage(props) {
             <div className={MessagesPageStyle.messagesPage}>
                 <div className={MessagesPageStyle.column}>
                     <DialogsHeader/>
-                    <Dialogs dialogsData={props.dialogsData}/>
+                    <Dialogs dialogsData={props.state.dialogsData}/>
                     <DialogsFooter/>
                 </div>
                 <div className={MessagesPageStyle.column}>

@@ -9,6 +9,7 @@ import MessagesPage from "../MessagesPage/MessagesPage";
 import {BrowserRouter, Route} from "react-router-dom";
 import PhotoPage from "../PhotoPage/PhotoPage";
 
+
 function App(props) {
 
     return (
@@ -17,14 +18,15 @@ function App(props) {
                 <Header/>
                 <Navbar/>
                 <div className={AppStyle.main_wrapper}>
-
-                    <Route path={'/Profile'} render={() => <Profile postData={props.state.postData}/> }/>
-                    <Route path='/MessagesPage' render={() => <MessagesPage dialogsData={props.state.dialogsData}/> }/>
-                    <Route path='/PhotoPage' render={() => <PhotoPage imgData={props.state.imgData}/> }/>
+                    <Route path={'/Profile'}
+                           render={() => <Profile state={props.state.profilePage} addPost={props.addPost}
+                                                  removePost={props.removePost}
+                                                  updateNewPostText={props.updateNewPostText}
+                           />}/>
+                    <Route path='/MessagesPage' render={() => <MessagesPage state={props.state.messagePage}/>}/>
+                    <Route path='/PhotoPage' render={() => <PhotoPage imgData={props.state.imgData}/>}/>
                 </div>
-
                 <Footer/>
-
             </div>
         </BrowserRouter>
     );

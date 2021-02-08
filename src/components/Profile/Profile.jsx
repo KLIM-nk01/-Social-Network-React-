@@ -1,6 +1,6 @@
 import React from "react";
 import ProfileStyle from "./Profile.module.scss";
-import MyPostShare from "./PostShare/PostShare";
+import PostShare from "./PostShare/PostShare";
 import Notification from "./Notification/Notification";
 import PersonInf from "./PersonInf/PersonInf";
 import PersonPost from "./PersonPost/PersonPost";
@@ -9,13 +9,16 @@ import PostContent from "./PersonPost/PostContent/PostContent";
 function Profile(props) {
     //
 
-    let postElement = props.postData.map((el) =>
-        <PersonPost imgSrc={el.imgSrc}
+    let postElement = props.state.postData.map((el) =>
+
+        <PersonPost imgSrc={'https://prikolist.club/wp-content/uploads/2019/08/kartinki_muzhskie_na_telefon_3_07073155.jpg'}
                     nameSurname={el.nameSurname}
                     postTextContent={el.postTextContent}
                     conutLikes={el.countLikes}
                     countComments={el.countComments}
                     countSharePost={el.countSharePost}
+                    removePost={props.removePost}
+
         />
     );
 
@@ -27,7 +30,7 @@ function Profile(props) {
                     <PersonInf/>
                 </div>
                 <div>
-                    <MyPostShare/>
+                    <PostShare updateNewPostText={props.updateNewPostText} newTextPostContent={props.state.newTextPostContent} addPost={props.addPost}/>
                     {postElement}
 
                 </div>

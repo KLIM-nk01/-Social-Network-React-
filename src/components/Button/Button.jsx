@@ -4,7 +4,7 @@ import ButtonStyle from './Button.module.scss';
 function Button(props) {
     return (
      <>
-     <button type='button' className={ButtonStyle.button}>
+     <button onClick={props.onClick} type='button' className={ButtonStyle.button}>
        {props.nameButton}
      </button>
      </>
