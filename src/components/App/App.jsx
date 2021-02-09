@@ -19,7 +19,8 @@ function App(props) {
                 <Navbar/>
                 <div className={AppStyle.main_wrapper}>
                     <Route path={'/Profile'}
-                           render={() => <Profile state={props.state.profilePage} addPost={props.addPost}
+                           render={() => <Profile state={props.state.profilePage}
+                                                  addPost={props.addPost}
                                                   removePost={props.removePost}
                                                   updateNewPostText={props.updateNewPostText}
                            />}/>

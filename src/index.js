@@ -3,22 +3,23 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./components/App/App";
 import reportWebVitals from "./reportWebVitals";
-import state, {addPost, removePost, subscribe, updateNewPostText} from './redux/state'
+import store from './redux/state'
 
 
-let rerenderEntireTree = (state) => {
+let rerenderEntireTree = () => {
     ReactDOM.render(
         <React.StrictMode>
-            <App state={state} addPost={addPost} removePost={removePost} updateNewPostText={updateNewPostText}/>
+            <App state={store.getState()} addPost={store.addPost.bind(store)} removePost={store.removePost.bind(store)}
+                 updateNewPostText={store.updateNewPostText.bind(store)}/>
         </React.StrictMode>,
         document.getElementById("root")
     )
 
 }
 
-rerenderEntireTree(state);
+rerenderEntireTree(store.getState());
 
-subscribe(rerenderEntireTree);
+store.subscribe(rerenderEntireTree);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
