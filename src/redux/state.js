@@ -47,12 +47,36 @@ export let store = {
         },
         messagePage: {
             dialogsData: [
-                {idUrl: '1', nameSurname: 'Nikita Klimovich', srcPhoto: 'https://cs-love.net/avatars/images/cs-love-avatar-1.jpg'},
-                {idUrl: '2', nameSurname: 'Angela Znakovan', srcPhoto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8CnE68XQBRKNs4u2QK1UqyTq1nXh-DkmrxA&usqp=CAU'},
-                {idUrl: '3', nameSurname: 'Mihail Zver', srcPhoto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtEEPu4T3S0axc4F4wshrMsnIs2w0tJqHqhg&usqp=CAU'},
-                {idUrl: '4', nameSurname: 'Nikita Klimovich', srcPhoto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPF5MNN5EW8kJUQGj9QlwyGJhBTESjzows0g&usqp=CAU'},
-                {idUrl: '5', nameSurname: 'Nikita Klimovich', srcPhoto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPF5MNN5EW8kJUQGj9QlwyGJhBTESjzows0g&usqp=CAU'},
-                {idUrl: '6', nameSurname: 'Nikita Klimovich', srcPhoto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPF5MNN5EW8kJUQGj9QlwyGJhBTESjzows0g&usqp=CAU'},
+                {
+                    idUrl: '1',
+                    nameSurname: 'Nikita Klimovich',
+                    srcPhoto: 'https://cs-love.net/avatars/images/cs-love-avatar-1.jpg'
+                },
+                {
+                    idUrl: '2',
+                    nameSurname: 'Angela Znakovan',
+                    srcPhoto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8CnE68XQBRKNs4u2QK1UqyTq1nXh-DkmrxA&usqp=CAU'
+                },
+                {
+                    idUrl: '3',
+                    nameSurname: 'Mihail Zver',
+                    srcPhoto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtEEPu4T3S0axc4F4wshrMsnIs2w0tJqHqhg&usqp=CAU'
+                },
+                {
+                    idUrl: '4',
+                    nameSurname: 'Nikita Klimovich',
+                    srcPhoto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPF5MNN5EW8kJUQGj9QlwyGJhBTESjzows0g&usqp=CAU'
+                },
+                {
+                    idUrl: '5',
+                    nameSurname: 'Nikita Klimovich',
+                    srcPhoto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPF5MNN5EW8kJUQGj9QlwyGJhBTESjzows0g&usqp=CAU'
+                },
+                {
+                    idUrl: '6',
+                    nameSurname: 'Nikita Klimovich',
+                    srcPhoto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPF5MNN5EW8kJUQGj9QlwyGJhBTESjzows0g&usqp=CAU'
+                },
             ],
         },
 
@@ -78,52 +102,72 @@ export let store = {
             {imgSrc: 'https://images.wallpaperscraft.ru/image/bmw_fary_podsvetka_137326_1920x1200.jpg'},
             {imgSrc: 'https://images.wallpaperscraft.ru/image/mercedesbenz_mercedes_zapravka_131955_1920x1200.jpg'},
         ],
-        profile: {
-
-        }
+        profile: {}
     },
 
-   rerenderEntireTree(){
-       console.log('no subscribers (observers)');
-   },
+    _callSubscriber() {
+        console.log('no subscribers (observers)');
+    },
 
-    getState () {
+    getState() {
         return this._state;
     },
-
-    setState (state) {
+    setState(state) {
         this._state = state;
     },
-
-    addPost (){
-        let newPost = {
-            idUrl: '4',
-            nameSurname: 'Big Man',
-            postTextContent: this._state.profilePage.newTextPostContent,
-            postImgContent: '',
-            countLikes: 0,
-            countComments: 0,
-            countSharePost: 0,
-        }
-        this._state.profilePage.postData.unshift(newPost);
-        this._state.profilePage.newTextPostContent = '';
-        this.rerenderEntireTree(this._state);
-    },
-
-    updateNewPostText(newText){
-        this._state.profilePage.newTextPostContent = newText;
-        this.rerenderEntireTree(this._state)
-    },
-
-    removePost() {
-
-        this._state.profilePage.postData.shift();
-        this.rerenderEntireTree(this._state);
-    },
-
     subscribe(observer) {
-        this.rerenderEntireTree = observer;
+        this._callSubscriber = observer;
     },
+
+    // _addPost() {
+    //     let newPost = {
+    //         idUrl: '4',
+    //         nameSurname: 'Big Man',
+    //         postTextContent: this._state.profilePage.newTextPostContent,
+    //         postImgContent: '',
+    //         countLikes: 0,
+    //         countComments: 0,
+    //         countSharePost: 0,
+    //     }
+    //     this._state.profilePage.postData.unshift(newPost);
+    //     this._state.profilePage.newTextPostContent = '';
+    //     this._callSubscriber(this._state);
+    // },
+
+    // _updateNewPostText(newText) {
+    //     this._state.profilePage.newTextPostContent = newText;
+    //     this._callSubscriber(this._state)
+    // },
+
+    // _removePost() {
+    //
+    //     this._state.profilePage.postData.shift();
+    //     this._callSubscriber(this._state);
+    // },
+
+    dispatch(action) {
+        if (action.type === 'ADD-POST') {
+            let newPost = {
+                idUrl: '4',
+                nameSurname: 'Big Man',
+                postTextContent: this._state.profilePage.newTextPostContent,
+                postImgContent: '',
+                countLikes: 0,
+                countComments: 0,
+                countSharePost: 0,
+            }
+            this._state.profilePage.postData.unshift(newPost);
+            this._state.profilePage.newTextPostContent = '';
+            this._callSubscriber(this._state);
+        } else if (action.type === 'REMOVE-POST') {
+            this._state.profilePage.postData.shift();
+            this._callSubscriber(this._state);
+        } else if(action.type === 'UPDATE-NEW-POST-TEXT'){
+            this._state.profilePage.newTextPostContent = action.newText;
+            this._callSubscriber(this._state)
+        }
+    }
+
 
 }
 

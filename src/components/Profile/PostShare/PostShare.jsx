@@ -8,14 +8,16 @@ function PostShare(props) {
 
     let addPost = () => {
         // let text = newPostContent.current.value;
-        props.addPost()
-        props.updateNewPostText('')
+        props.dispatch({ type: 'ADD-POST'})
+        let action = { type: 'UPDATE-NEW-POST-TEXT', newText: ''};
+        props.dispatch(action);
     }
 
     let onPostChange = () => {
         let text = newPostContent.current.value;
-        props.updateNewPostText(text);
-        // console.log(text)
+        let action = { type: 'UPDATE-NEW-POST-TEXT', newText: text};
+        props.dispatch(action);
+
     }
 
     return (

@@ -9,7 +9,7 @@ function PersonPost(props) {
   return (
     <>
       <div className={PersonPostStyle.personPost}>
-        <PostHeader removePost={props.removePost} imgSrc={props.imgSrc} nameSurname={props.nameSurname}/>
+        <PostHeader dispatch={props.dispatch} imgSrc={props.imgSrc} nameSurname={props.nameSurname}/>
         <PostContent postTextContent={props.postTextContent} />
         <PostFooter conutLikes={props.conutLikes} countComments={props.countComments} countSharePost={props.countSharePost}/>
       </div>

@@ -20,9 +20,7 @@ function App(props) {
                 <div className={AppStyle.main_wrapper}>
                     <Route path={'/Profile'}
                            render={() => <Profile state={props.state.profilePage}
-                                                  addPost={props.addPost}
-                                                  removePost={props.removePost}
-                                                  updateNewPostText={props.updateNewPostText}
+                                                  dispatch={props.dispatch}
                            />}/>
                     <Route path='/MessagesPage' render={() => <MessagesPage state={props.state.messagePage}/>}/>
                     <Route path='/PhotoPage' render={() => <PhotoPage imgData={props.state.imgData}/>}/>

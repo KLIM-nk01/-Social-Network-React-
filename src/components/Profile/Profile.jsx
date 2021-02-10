@@ -17,7 +17,7 @@ function Profile(props) {
                     conutLikes={el.countLikes}
                     countComments={el.countComments}
                     countSharePost={el.countSharePost}
-                    removePost={props.removePost}
+                    dispatch={props.dispatch}
 
         />
     );
@@ -30,7 +30,10 @@ function Profile(props) {
                     <PersonInf/>
                 </div>
                 <div>
-                    <PostShare updateNewPostText={props.updateNewPostText} newTextPostContent={props.state.newTextPostContent} addPost={props.addPost}/>
+                    <PostShare newTextPostContent={props.state.newTextPostContent}
+
+                               updateNewPostText={props.updateNewPostText}
+                               dispatch={props.dispatch}/>
                     {postElement}
 
                 </div>
