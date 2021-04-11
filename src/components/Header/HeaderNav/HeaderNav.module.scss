@@ -1,0 +1,14 @@
+@import '../../../global/mixin.scss';
+
+.header_nav{
+    width: 320px;
+    height: 40px;
+
+    @include flex;
+
+    a{
+        text-decoration: none;
+        color: #333333;
+        font-weight: bold;
+    }
+}

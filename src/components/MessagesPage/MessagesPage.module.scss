@@ -1,0 +1,17 @@
+.messagesPage {
+  width: 1170px;
+  height: 70vh;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-column-gap: 5px;
+  border: 3px solid #edeef0;
+  background-color: #f0f0f0;
+
+  .column {
+
+    background-color: white;
+
+
+  }
+}

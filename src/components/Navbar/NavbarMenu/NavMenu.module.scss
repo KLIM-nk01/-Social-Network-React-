@@ -1,0 +1,36 @@
+.wrapper {
+  width: 100%;
+  background-color: white;
+
+  .navMenu_wrapper {
+    height: 60px;
+    width: 1170px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    .navMenu {
+      width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      a {
+        
+        font-weight: 900;
+        transition: all 0.3s ease-out;
+        &:hover {
+          font-size: 20px;
+          
+          transform: scale(1.2);
+        }
+      }
+
+      .active {
+        color: #dc4734;
+      }
+    }
+  }
+}

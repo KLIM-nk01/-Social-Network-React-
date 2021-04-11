@@ -1,0 +1,8 @@
+@import '../../../../global/mixin.scss';
+
+.postHeader{
+    width: 100%;
+    height: 45px;
+    // border: 1px solid black;
+    @include flex;
+}

@@ -1,0 +1,15 @@
+@import '../../../../../global/mixin.scss';
+
+.person{
+    display: flex;
+    justify-content: space-between;
+    width: 130px;
+    img{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+    }
+    p{
+        font-size: 14px;
+    }
+}

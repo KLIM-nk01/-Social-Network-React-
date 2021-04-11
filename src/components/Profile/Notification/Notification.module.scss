@@ -1,0 +1,8 @@
+@import '../../../global/mixin.scss';
+
+.notification{
+    height: 550px;
+    width: 270px;
+    background-color: white;
+    @include shadow;
+}

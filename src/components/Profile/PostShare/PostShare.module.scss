@@ -1,0 +1,40 @@
+@import '../../../global/mixin.scss';
+
+.Post_Share {
+  width: 570px;
+  height: 80px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  @include shadow;
+
+  img {
+    width: 46px;
+    height: 46px;
+    border-radius: 50px;
+    margin-left: 10px;
+  }
+
+  .Share {
+    width: 85%;
+    position: relative;
+    button{
+      position: absolute;
+      top: 11%;
+      right: 5px;
+
+    }
+    .Share_wrapper {
+      height: 44px;
+      width: 100%;
+      border-radius: 50px;
+      background-color: #f1f1f1;
+      resize: none;
+      box-shadow: inset 0 0 10px rgba(221, 221, 221, 1);
+      padding: 13px 90px 13px 20px;
+    }
+  }
+}
+

@@ -1,0 +1,30 @@
+
+.ChatFooter{
+  width: 100%;
+  height: 65px;
+  background-color: white;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  textarea{
+    outline: 0;
+    height: 45px;
+    width: 100%;
+    resize: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    line-height: 17px;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    transition: border-bottom-color .3s linear;
+    padding: 13px;
+    border-radius: 50px;
+    border: 1px solid #dc4734;
+  }
+  button{
+    position: absolute;
+    right: 20px;
+  }
+}

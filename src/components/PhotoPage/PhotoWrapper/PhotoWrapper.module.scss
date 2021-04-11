@@ -1,0 +1,11 @@
+@import "../../../global/mixin.scss";
+
+.PhotoWrapper{
+  width: 100%;
+  padding: 30px;
+  background-color: white;
+  @include shadow;
+  display: flex;
+  flex-wrap: wrap;
+
+}

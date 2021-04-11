@@ -1,0 +1,25 @@
+
+.Chat {
+  width: 100%;
+  height: 58vh;
+  border-right: 1px solid #edeef0;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    visibility: hidden;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 8px;
+    background-color: #d2d6df;
+    border-radius: 50px;
+  }
+
+  &::-webkit-scrollbar-track {
+    visibility: hidden;
+  }
+}

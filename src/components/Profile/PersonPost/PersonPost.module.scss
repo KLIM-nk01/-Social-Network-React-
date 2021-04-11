@@ -1,0 +1,10 @@
+@import '../../../global/mixin.scss';
+
+.personPost{
+    width: 100%;
+    
+    @include shadow;
+    background-color: white;
+    @include marginTop;
+    padding: 30px;
+}

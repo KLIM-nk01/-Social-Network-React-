@@ -1,0 +1,17 @@
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @mixin shadow {
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+  }
+
+  @mixin marginTop {
+    margin-top: 30px;
+  }
+
+  @mixin paddingAll {
+    padding: 30px;
+  }

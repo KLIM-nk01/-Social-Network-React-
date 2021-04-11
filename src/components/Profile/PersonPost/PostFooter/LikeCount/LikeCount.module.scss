@@ -1,0 +1,29 @@
+@import "../../../../../global/mixin.scss";
+
+.likeCount {
+  width: 200px;
+
+  button {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      transition: all 0.9s ease-out;
+    }
+    span {
+      color: #666;
+      font-size: 14px;
+
+    }
+    &:hover {
+      span{
+        color: #dc4734;
+      }
+      img{
+        transform: scale(1.2);
+      }
+    }
+  }
+}
